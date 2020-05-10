@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import br.com.fabio.junior.zupflix.R
 import br.com.fabio.junior.zupflix.presentation.base.BaseActivity
+import br.com.fabio.junior.zupflix.presentation.movies.fragment.FavoriteFragment
+import br.com.fabio.junior.zupflix.presentation.movies.fragment.HomeFragment
+import br.com.fabio.junior.zupflix.presentation.movies.fragment.SearchFragment
 import kotlinx.android.synthetic.main.activity_movie.*
 
 class MovieActivity : BaseActivity() {
@@ -12,9 +15,14 @@ class MovieActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie)
 
-        val firstFragment = FirstFragment()
-        val secondFragment = SecondFragment()
-        val thirdFragment = ThirdFragment()
+        val firstFragment =
+            HomeFragment()
+        val secondFragment =
+            FavoriteFragment()
+        val thirdFragment =
+            SearchFragment()
+
+
 
         setCurrentFragment(firstFragment)
 
@@ -26,6 +34,8 @@ class MovieActivity : BaseActivity() {
             }
             true
         }
+
+
     }
 
     private fun setCurrentFragment(fragment: Fragment) = supportFragmentManager.beginTransaction()
