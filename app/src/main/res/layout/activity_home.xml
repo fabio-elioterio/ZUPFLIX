@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".presentation.movies.view.MovieActivity">
+    tools:context=".presentation.movies.view.HomeActivity">
 
     <include
         android:id="@+id/include"
@@ -29,18 +29,25 @@
         app:layout_constraintStart_toStartOf="@+id/include"
         app:layout_constraintTop_toTopOf="@+id/include" />
 
-    <FrameLayout
-        android:id="@+id/flFragment"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabsMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/colorWhite"
+            app:tabBackground="@color/colorItems"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" >
-
-        <include layout="@layout/viewpager_tablayout" />
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/tabsMain"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

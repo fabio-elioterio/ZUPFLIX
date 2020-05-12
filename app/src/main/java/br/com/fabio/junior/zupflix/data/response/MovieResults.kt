@@ -1,27 +1,21 @@
 package br.com.fabio.junior.zupflix.data.response
 
-import br.com.fabio.junior.zupflix.data.model.Movie
 import com.google.gson.annotations.SerializedName
 
 data class MovieResults (
 
-    @SerializedName("title")
-    val title: String,
+    @SerializedName("id")
+    val id: String,
+    @SerializedName("original_title")
+    val originalTitle: String,
     @SerializedName("vote_average")
-    val voteAverage: Float,
+    val voteAverage: Double,
+    @SerializedName("genre_ids")
+    val genreIds: List<Int>,
     @SerializedName("overview")
     val overview: String,
+    @SerializedName("poster_path")
+    val posterPath: String,
     @SerializedName("release_date")
-    val releaseDate: String,
-    @SerializedName("popularity")
-    val popularity: Double
-
-){
-    fun getMovieModel() = Movie (
-        title = this.title,
-        voteAverage = this.voteAverage,
-        overview = this.overview,
-        releaseDate = this.releaseDate,
-        popularity = this.popularity
-    )
-}
+    val releaseDate: String
+)

@@ -15,8 +15,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/movie/\""
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
         buildConfigField "String", "API_KEY", "\"809a183d7e4be5aa955410e62121e0c0\""
+        buildConfigField "String", "BASE_URL_IMAGE", "\"https://image.tmdb.org/t/p/w500/\""
     }
 
     buildTypes {
@@ -47,7 +48,11 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //lifecycle
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha02'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"

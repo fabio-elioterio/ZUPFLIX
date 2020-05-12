@@ -1,4 +1,4 @@
-package br.com.fabio.junior.zupflix.presentation.movies.fragment
+package br.com.fabio.junior.zupflix.presentation.movies.favoritefragment
 
 import androidx.fragment.app.Fragment
 import br.com.fabio.junior.zupflix.R
