@@ -1,4 +1,4 @@
-package br.com.fabio.junior.zupflix.presentation.movies.homefragment.adapter
+package br.com.fabio.junior.zupflix.presentation.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,9 +1,9 @@
-package br.com.fabio.junior.zupflix.presentation.movies.view
+package br.com.fabio.junior.zupflix.presentation.home.view
 
 import android.os.Bundle
 import br.com.fabio.junior.zupflix.R
 import br.com.fabio.junior.zupflix.presentation.base.BaseActivity
-import br.com.fabio.junior.zupflix.presentation.movies.pager_adapter.HomePageAdapter
+import br.com.fabio.junior.zupflix.presentation.home.pager_adapter.HomePageAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {
@@ -17,6 +17,7 @@ class HomeActivity : BaseActivity() {
 
         viewPagerMain.adapter = fragmentAdapter
         tabsMain.setupWithViewPager(viewPagerMain)
+
 
     }
 

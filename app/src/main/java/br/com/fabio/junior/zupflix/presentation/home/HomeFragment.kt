@@ -1,4 +1,4 @@
-package br.com.fabio.junior.zupflix.presentation.movies.homefragment
+package br.com.fabio.junior.zupflix.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.fabio.junior.zupflix.BuildConfig
 import br.com.fabio.junior.zupflix.R
-import br.com.fabio.junior.zupflix.presentation.movies.homefragment.adapter.HomeFragmentAdapter
-import br.com.fabio.junior.zupflix.presentation.movies.homefragment.homefragmentviewmodel.HomeFragmentViewModel
+import br.com.fabio.junior.zupflix.presentation.home.adapter.HomeFragmentAdapter
+import br.com.fabio.junior.zupflix.presentation.home.homefragmentviewmodel.HomeFragmentViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment: Fragment() {
@@ -20,8 +20,8 @@ class HomeFragment: Fragment() {
     private val viewModel: HomeFragmentViewModel by lazy { ViewModelProvider(this).get(HomeFragmentViewModel::class.java) }
 
     override fun onCreateView(inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
@@ -48,7 +48,7 @@ class HomeFragment: Fragment() {
             })
         }
 
-        viewModel.getMovie(BuildConfig.API_KEY)
+        viewModel.getMovie(BuildConfig.API_KEY, language = "pt-BR")
 
     }
 

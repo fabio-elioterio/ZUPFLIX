@@ -2,7 +2,7 @@ package br.com.fabio.junior.zupflix.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieResults (
+data class GenresResults (
 
     @SerializedName("id")
     val id: Int,
